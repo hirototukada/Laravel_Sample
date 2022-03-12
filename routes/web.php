@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Auth\HelloController;
 use App\Http\Controllers\DisplayController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\MapController;
 
 Auth::routes();
 
@@ -66,5 +67,7 @@ Route::group(['middleware' => 'auth'], function() {
     // 前月へのリンク
     Route::get('/form.date/{now}/sub',[DisplayController::class, 'formDateSub'])->name('form.date.sub');
     //マップページ表示
-    Route::get('/map',[DisplayController::class, 'Map'])->name('map');
+    Route::get('/map',[MapController::class, 'map'])->name('map');
+    // ユーザーページを表示
+    Route::get('/map_user',[MapController::class,'map_user'])->name('map_user');
 });

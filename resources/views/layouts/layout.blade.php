@@ -31,7 +31,7 @@
             <a href="{{ route('map') }}">マップ</a>
             <div class="my-navbar-control w-25">
                 @if (Auth::check())
-                    <a class="my-navbar-item mr-3">{{ Auth::user()->name }}</a>
+                    <a href="{{ route('map_user') }}" class="my-navbar-item mr-3">{{ Auth::user()->name }}</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-primary">ログアウト</button>
