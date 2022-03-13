@@ -14,8 +14,12 @@ class CreatePostalCodesTable extends Migration
     public function up()
     {
         Schema::create('postal_codes', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+            $table->increments('id');
+            $table->unsignedInteger('first_code')->index();
+            $table->unsignedInteger('last_code')->index();
+            $table->string('prefecture');
+            $table->string('city');
+            $table->string('address');
         });
     }
 
