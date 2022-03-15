@@ -23,6 +23,8 @@
     <div id="app">
         <div id="map" class="bg-dark" style="height:500px">
         </div>
+
+        wwwww
         {{-- <script src="{{ asset('js/result.js') }}" defer></script> --}}
         <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyC43r8ZkHSn_2lphwvdzlGx3qdc6QKf--w&callback=initMap" async defer>
         </script>
